@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="d_Kry"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-20 12:32:06 PM"/>
+        <attribute name="created" value="ZF9Lcnk7REVTS1RPUC1SOUhKUTE1OzIwMjMtMDktMTk7MTA6Mzc6MjYgUE07Mjg0NQ=="/>
+        <attribute name="edited" value="ZF9Lcnk7REVTS1RPUC1SOUhKUTE1OzIwMjMtMDktMjA7MTI6MzI6MDYgUE07MjsyOTQx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="scoreOne" type="Real" array="False" size=""/>
+            <declare name="scoreTwo" type="Real" array="False" size=""/>
+            <declare name="total" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter score one:&quot;" newline="True"/>
+            <input variable="scoreOne"/>
+            <output expression="&quot;Enter score two:&quot;" newline="True"/>
+            <input variable="scoreTwo"/>
+            <assign variable="total" expression="(scoreOne * .60) + (scoreTwo * .40)"/>
+            <output expression="&quot;The total score is &quot; &amp; total" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

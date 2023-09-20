@@ -1,0 +1,6 @@
+print("Enter score one:")
+score1 = float(input())
+print("Enter score two:")
+score2 = float(input())
+total = (score1 * 0.6) + (score2 * 0.4)
+print("The total score is " + str(total) + ".")

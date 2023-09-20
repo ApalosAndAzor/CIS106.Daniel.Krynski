@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="d_Kry"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-20 03:08:26 PM"/>
+        <attribute name="created" value="ZF9Lcnk7REVTS1RPUC1SOUhKUTE1OzIwMjMtMDktMjA7MDI6MjU6MjMgUE07MjgzMg=="/>
+        <attribute name="edited" value="ZF9Lcnk7REVTS1RPUC1SOUhKUTE1OzIwMjMtMDktMjA7MDM6MDg6MjYgUE07MjsyOTQ2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="totalMeal" type="Real" array="False" size=""/>
+            <declare name="tipFifteen" type="Real" array="False" size=""/>
+            <declare name="tipEighteen" type="Real" array="False" size=""/>
+            <declare name="tipTwenty" type="Real" array="False" size=""/>
+            <declare name="totalFifteen" type="Real" array="False" size=""/>
+            <declare name="totalEighteen" type="Real" array="False" size=""/>
+            <declare name="totalTwenty" type="Real" array="False" size=""/>
+            <output expression="&quot;How much was your meal?&quot;" newline="True"/>
+            <input variable="totalMeal"/>
+            <assign variable="tipFifteen" expression="totalMeal * 0.15"/>
+            <assign variable="tipEighteen" expression="totalMeal * 0.18"/>
+            <assign variable="tipTwenty" expression="totalMeal * 0.20"/>
+            <assign variable="totalFifteen" expression="totalMeal + tipFifteen"/>
+            <assign variable="totalEighteen" expression="totalMeal + tipEighteen"/>
+            <assign variable="totalTwenty" expression="totalMeal + tipTwenty"/>
+            <output expression="&quot;With a 15% tip, the total is &quot; &amp; totalMeal &amp; &quot; the tip is &quot; &amp; tipFifteen &amp; &quot; and the total with Tip: &quot; &amp; totalFifteen &amp; &quot;. With a 18% tip, the total is &quot; &amp; totalMeal &amp; &quot; the tip is &quot; &amp; tipEighteen &amp; &quot; and the total with Tip: &quot; &amp; totalEighteen &amp; &quot;. With a 20% tip, the total is &quot; &amp; totalMeal &amp; &quot; the tip is &quot; &amp; tipTwenty &amp; &quot; and the total with Tip: &quot; &amp; totalTwenty" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

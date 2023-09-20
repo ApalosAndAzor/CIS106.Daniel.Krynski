@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="d_Kry"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-20 02:25:21 PM"/>
+        <attribute name="created" value="ZF9Lcnk7REVTS1RPUC1SOUhKUTE1OzIwMjMtMDktMjA7MDE6Mjk6MjggUE07Mjg0MA=="/>
+        <attribute name="edited" value="ZF9Lcnk7REVTS1RPUC1SOUhKUTE1OzIwMjMtMDktMjA7MDI6MjU6MjEgUE07MjsyOTM5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="purchasePricePerShare" type="Real" array="False" size=""/>
+            <declare name="currentStockPrice" type="Real" array="False" size=""/>
+            <declare name="quantityOfStock" type="Real" array="False" size=""/>
+            <declare name="compute" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter the price per share at the time of purchase:&quot;" newline="True"/>
+            <input variable="purchasePricePerShare"/>
+            <output expression="&quot;Enter the current stock price:&quot;" newline="True"/>
+            <input variable="currentStockPrice"/>
+            <output expression="&quot;Enter how much stock you have:&quot;" newline="True"/>
+            <input variable="quantityOfStock"/>
+            <assign variable="compute" expression="(currentStockPrice - purchasePricePerShare) * quantityOfStock"/>
+            <output expression="&quot;Your value of the stock increased (or decreased) by &quot; &amp; compute &amp; &quot;.&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
