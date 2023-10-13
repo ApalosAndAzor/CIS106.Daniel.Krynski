@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="d_Kry"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-10 09:39:19 PM"/>
+        <attribute name="created" value="ZF9Lcnk7REVTS1RPUC1SOUhKUTE1OzIwMjMtMTAtMTA7MDk6MTQ6NTAgUE07MjgyOA=="/>
+        <attribute name="edited" value="ZF9Lcnk7REVTS1RPUC1SOUhKUTE1OzIwMjMtMTAtMTA7MDk6Mzk6MTkgUE07MTsyOTQ4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="prompt" type="String" array="False" size=""/>
+            <declare name="last" type="String" array="False" size=""/>
+            <declare name="examOne" type="Real" array="False" size=""/>
+            <declare name="examTwo" type="Real" array="False" size=""/>
+            <declare name="compute" type="Real" array="False" size=""/>
+            <declare name="count" type="Integer" array="False" size=""/>
+            <assign variable="count" expression="0"/>
+            <input variable="prompt"/>
+            <while expression="prompt == &quot;Yes&quot;">
+                <assign variable="count" expression="count + 1"/>
+                <input variable="last"/>
+                <input variable="examOne"/>
+                <input variable="examTwo"/>
+                <assign variable="compute" expression="(examOne + examTwo) / 2"/>
+                <output expression="last &amp; &quot; your average exam score is &quot; &amp; compute" newline="True"/>
+                <input variable="prompt"/>
+            </while>
+            <output expression="&quot;This is how many students entered data: &quot; &amp; count" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
