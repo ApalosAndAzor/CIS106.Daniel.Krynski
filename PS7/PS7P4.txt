@@ -1,0 +1,9 @@
+Battery
+19
+199
+Ladder
+81
+69
+Steel
+64
+29

@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="d_Kry"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-18 10:17:23 PM"/>
+        <attribute name="created" value="ZF9Lcnk7REVTS1RPUC1SOUhKUTE1OzIwMjMtMTAtMTA7MDk6MTQ6NTAgUE07MjgyOA=="/>
+        <attribute name="edited" value="ZF9Lcnk7REVTS1RPUC1SOUhKUTE1OzIwMjMtMTAtMTg7MTA6MTc6MjMgUE07ODsyOTQ2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="principleAmount" type="Real" array="False" size=""/>
+            <declare name="interestRate" type="Real" array="False" size=""/>
+            <declare name="annualInterest" type="Real" array="False" size=""/>
+            <declare name="endingBalance" type="Real" array="False" size=""/>
+            <declare name="accumulatedInterest" type="Real" array="False" size=""/>
+            <declare name="discountAmount" type="Real" array="False" size=""/>
+            <declare name="prompt" type="String" array="False" size=""/>
+            <declare name="year" type="Integer" array="False" size=""/>
+            <assign variable="accumulatedInterest" expression="0.00"/>
+            <input variable="prompt"/>
+            <while expression="prompt == &quot;Yes&quot;">
+                <input variable="principleAmount"/>
+                <input variable="interestRate"/>
+                <output expression="&quot;Year   Beginning Balance   Ending Balance&quot;" newline="True"/>
+                <for variable="year" start="1" end="5" direction="inc" step="1">
+                    <assign variable="annualInterest" expression="principleAmount * interestRate"/>
+                    <assign variable="endingBalance" expression="principleAmount + annualInterest"/>
+                    <output expression="year &amp; &quot; &quot; &amp; principleAmount &amp; &quot; &quot; &amp; endingBalance" newline="True"/>
+                    <assign variable="accumulatedInterest" expression="accumulatedInterest + annualInterest"/>
+                    <assign variable="principleAmount" expression="endingBalance"/>
+                </for>
+                <output expression="&quot;Accumulated interest earned overall: &quot; &amp; accumulatedInterest" newline="True"/>
+                <input variable="prompt"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

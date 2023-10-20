@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="d_Kry"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-18 11:07:50 PM"/>
+        <attribute name="created" value="ZF9Lcnk7REVTS1RPUC1SOUhKUTE1OzIwMjMtMTAtMTA7MDk6MTQ6NTAgUE07MjgyOA=="/>
+        <attribute name="edited" value="ZF9Lcnk7REVTS1RPUC1SOUhKUTE1OzIwMjMtMTAtMTg7MTE6MDc6NTAgUE07MTE7Mjk4OA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="aye" type="Integer" array="False" size=""/>
+            <declare name="bee" type="Integer" array="False" size=""/>
+            <declare name="cee" type="Integer" array="False" size=""/>
+            <declare name="count" type="Integer" array="False" size=""/>
+            <assign variable="aye" expression="1"/>
+            <assign variable="bee" expression="1"/>
+            <output expression="aye" newline="True"/>
+            <output expression="bee" newline="True"/>
+            <for variable="count" start="1" end="18" direction="inc" step="1">
+                <assign variable="cee" expression="aye + bee"/>
+                <output expression="cee" newline="True"/>
+                <assign variable="aye" expression="bee"/>
+                <assign variable="bee" expression="cee"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

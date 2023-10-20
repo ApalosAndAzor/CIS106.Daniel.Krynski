@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="d_Kry"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-19 10:37:31 PM"/>
+        <attribute name="created" value="ZF9Lcnk7REVTS1RPUC1SOUhKUTE1OzIwMjMtMTAtMTg7MTE6MDg6MDYgUE07MjgzMw=="/>
+        <attribute name="edited" value="ZF9Lcnk7REVTS1RPUC1SOUhKUTE1OzIwMjMtMTAtMTk7MTA6Mzc6MzEgUE07ODsyOTQ4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="lastName" type="String" array="False" size=""/>
+            <declare name="districtCode" type="String" array="False" size=""/>
+            <declare name="numberCredits" type="Integer" array="False" size=""/>
+            <declare name="costCredit" type="Integer" array="False" size=""/>
+            <declare name="computeTuition" type="Integer" array="False" size=""/>
+            <declare name="sumTuition" type="Integer" array="False" size=""/>
+            <declare name="count" type="Integer" array="False" size=""/>
+            <open expression="&quot;PS7P5.txt&quot;" mode="read"/>
+            <assign variable="sumTuition" expression="0"/>
+            <assign variable="count" expression="0"/>
+            <while expression="!EOF()">
+                <read variable="lastName"/>
+                <read variable="districtCode"/>
+                <read variable="numberCredits"/>
+                <if expression="districtCode = &quot;I&quot;">
+                    <then>
+                        <assign variable="costCredit" expression="250"/>
+                    </then>
+                    <else>
+                        <assign variable="costCredit" expression="500"/>
+                    </else>
+                </if>
+                <assign variable="computeTuition" expression="numberCredits * costCredit"/>
+                <assign variable="count" expression="count + 1"/>
+                <assign variable="sumTuition" expression="sumTuition + computeTuition"/>
+                <output expression="&quot;Last Name: &quot; &amp; lastName" newline="True"/>
+                <output expression="&quot;Credits taken: &quot; &amp; numberCredits" newline="True"/>
+                <output expression="&quot;Tuition owed: $&quot; &amp; computeTuition" newline="True"/>
+            </while>
+            <close/>
+            <output expression="&quot;Sum of all tuition owed: $&quot; &amp; sumTuition" newline="True"/>
+            <output expression="&quot;Number of students: &quot; &amp; count" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
